@@ -3,8 +3,8 @@
 > 참고 자료
 > > 개발자를 위한 웹 기술 : [HTML: Hypertext Markup Language](https://developer.mozilla.org/ko/docs/Web/HTML)    
 
-#1. HTML 이해하기 
-##1) HTML 소개  
+# 1. HTML 이해하기 
+## 1) HTML 소개  
 
 - HTML이란?
   - HyperText Markup Language 
@@ -17,7 +17,7 @@
   - 1990년대 영국 물리학자 팀 버너스리가 제안
   - 초기 개발 목적은 연구소 내 연구원들에게 신속하게 정보 및 문서를 공유하기 위함   
 
-##2) HTML 문법 : 태그(tag)와 요소(element)
+## 2) HTML 문법 : 태그(tag)와 요소(element)
 
 - 태그(tag)?
   - HTML은 태그들의 집합
@@ -31,7 +31,7 @@
 - 요소(element)?
   - 내용을 포함한 태그 전체
 
-##3) HTML 문법 : 속성(attribute)
+## 3) HTML 문법 : 속성(attribute)
 
 - 속성을 사용하는 방법 
   - 속성은 "속성 이름"과 "속성 값"으로 이루어져 있음 
@@ -50,7 +50,7 @@
   - 특정 태그에만 사용할 수 있는 속성 
   - 필수 속성 vs 선택 속성 
 
-#4) HTML 문법 : 태그 중첩 
+# 4) HTML 문법 : 태그 중첩 
 
 - 태그 중첩이란? 
   - 태그 안에 다른 태그를 선언하여, 태그 간 부-모 관계를 구성하는 것 
