@@ -25,6 +25,7 @@
 - 태그 사용 방법 
   - 태그는 <, > 기호로 표현하며 <, > 기호 사이에 태그 이름이 들어감
   - 대부분 태그는 **시작 태그** 와 **종료 태그** 로 이루어지며 종료 태그는 태그 이름 앞에 '/' 기호가 붙음
+![Alt text](https://media.prod.mdn.mozit.cloud/attachments/2014/11/14/9347/c07aa313dbdd667585430f4eca354dbd/grumpy-cat-small.png)
 ~~~
 (예) <h1>Hello, HTML</h1> 
 ~~~ 
