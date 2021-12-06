@@ -4,7 +4,7 @@
 > > 개발자를 위한 웹 기술 : [HTML: Hypertext Markup Language](https://developer.mozilla.org/ko/docs/Web/HTML)    
 
 # 1. HTML 태그 
-## 1) 제목과 단락 요소  
+## 1) 제목과 단락 요소 : heading, paragraph 
 
 - 제목(heading) 태그?
   - 제목 태그는 문서 내 제목을 표현할 때 사용
@@ -45,7 +45,7 @@
 - strike 태그 ```<s>``` : 태그는 글자의 중간선을 표현하는 태그
  - 예전에 존재했던 strike 태그와는 다른 태그로, strike 태그는 폐기되어 더는 사용할 수 없음
 
-## 3) 앵커 요소 [더 많은 anchor 요소](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) 
+## 3) 앵커(anchor) 요소 [더 많은 anchor 요소](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) 
 
 - 앵커(anchor) 요소란?
   - HTML에서 HT(Hyper Text)는 링크를 의미하는 것으로, 링크는 클릭하기만 하면 다른 페이지로 쉽게 이동을 할 수 있음
@@ -80,9 +80,42 @@
   - ```<a target="_parent">``` : 프레임이라는 특정 조건에서만 동작
   - ```<a target="_top">``` : 프레임이라는 특정 조건에서만 동작 
 
+## 4) 의미가 없는 컨테이너 요소   
 
+- 의미가 없는 컨테이너 요소란? 
+  - 웹이 발전하면서 현재 웹페이지는 문서 형태보다는 시각적으로 정보를 표현하는 방향으로 많이 발전
+  - HTML은 애초 문서를 위한 언어였기 때문에, 대부분의 태그들이 문서에 적합한 의미를 갖고 있음. 이런 태그들로는 현재의 다양한 콘텐츠를 표현하기에는 부족한 부분이 있음
+  - 새로운 콘텐츠를 표현하기 위해 적합한 의미를 갖는 태그들이 생기기도 하는데, 콘텐츠를 표현하기에 적합한 태그가 없는 경우에는 주로 의미 없는 태그들을 사용
+  - 이는 문서의 스타일이나 데이터 전송 등과 같은 부가적인 기능을 위해서도 종종 사용
+  - 태그 자체에 아무 의미가 없으며, 단순히 요소들을 묶기 위해 사용되는 태그
 
+- ```<div>``` 태그 
+  - div(division) 태그는 **블록 레벨 태그**
+  - 블록 레벨 요소는 기본적으로 한 줄을 생성해서 내용을 
+  - 참고로, ```<p>``` 태그도 블록 레벨 태그
+~~~
+(예) 
+<div class="warning">
+    <img src="/media/examples/leopard.jpg"
+         alt="An intimidating leopard.">
+    <p>Beware of the leopard</p>
+</div>
+~~~ 
+- ```<span>``` 태그
+  - span 태그는 ***인라인 레벨 태그** 
+  - 인라인 레벨 요소들은 블록 레벨 요소의 한 줄 안에서 표현되는 
+  - 텍스트를 꾸며주는 ```<b>, <i>, <u>, <s>```는 모두 인라인 레벨 태그
+~~~
+(예) 
+<p>Add the <span class="ingredient">basil</span>, <span class="ingredient">pine nuts</span> and <span class="ingredient">garlic</span> to a blender and blend into a paste.</p>
 
+<p>Gradually add the <span class="ingredient">olive oil</span> while running the blender slowly.</p>
+~~~
+- (참고) 블록 레벨 요소
+  - 기본적으로 블록 레벨 요소는 부모 요소의 전체 공간을 차지하여 "블록"을 만듬 
+  - 브라우저는 보통 블록 레벨 요소의 앞과 뒤를 개행해서 그립니다. 상자를 쌓는 것 처럼 생각할 수 있음
+- (참고) 인라인 요소
+  - 인라인 요소는 콘텐츠의 흐름을 끊지 않고, 요소를 구성하는 태그에 할당된 공간만 차지 
 
 
 
