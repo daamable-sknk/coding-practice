@@ -69,20 +69,13 @@
 <a href="some-element-id">회사 소개</a>
 ~~~
 - href 속성 : mailto, tel
-  - mailto 
-~~~
-<a href="mailto:m.bluth@example.com">Email</a>
-~~~
-  - tel
-~~~
-<a href="tel:+123456789">Phone</a>
-~~~    
+  - mailto : ```<a href="mailto:m.bluth@example.com">Email</a>```
+  - tel : ```<a href="tel:+123456789">Phone</a>```    
 - target 속성 
   - target 속성은 링크된 리소스를 어디에 표시할지를 나타내는 속성
   - 형식 : target="(target 속성값)" 
   - 크게 4가지 속성값이 있음
-  - ```<a target="_self">```
-    - **현재 화면에 표시**한다는 의미로, target 속성이 선언되지 않으면 기본적으로 self와 같이 동작
+  - ```<a target="_self">``` : **현재 화면에 표시**한다는 의미로, target 속성이 선언되지 않으면 기본적으로 self와 같이 동작
   - ```<a target="_blank">``` : **새로운 창에 표시**한다는 의미로 외부 페이지가 나타나게끔 하는 속성
   - ```<a target="_parent">``` : 프레임이라는 특정 조건에서만 동작
   - ```<a target="_top">``` : 프레임이라는 특정 조건에서만 동작 
