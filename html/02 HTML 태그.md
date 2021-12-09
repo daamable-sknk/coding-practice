@@ -117,6 +117,304 @@
 - (참고) 인라인 요소
   - 인라인 요소는 콘텐츠의 흐름을 끊지 않고, 요소를 구성하는 태그에 할당된 공간만 차지 
 
+## 5) 리스트 요소 
+
+- ```<ul>``` 태그
+  - ul(unordered list) 태그는 순서가 없는 리스트를 표현할 때 사용 
+~~~
+(예) 
+<ul> 
+    <li> 콩나물</li> 
+    <li> 파</li> 
+    <li> 국  간장</li> 
+    ... 
+</ul> 
+~~~   
+
+- ```<ol>``` 태그
+  - ol(ordered list) 태그는 순서가 있는 리스트를 표현할 때 사용
+  - 해당 태그를 선언한 후, 그 안에서 ```<li>```를 사용해 각 항목을 나타내서 사용
+~~~
+(예) 
+<ol>
+    <li>냄비에 국물용 멸치를 넣고 한소끔 끓여 멸치 육수를 7컵(1,400ml) 만든다.</li>
+    <li>콩나물을 넣고 뚜껑을 덮어 콩나물이 익을 때까지 끓인다.</li>
+    <li>뚜껑을 열고 대파, 마늘, 고춧가루를 넣고 끓인다.</li>
+    ...
+</ol> 
+~~~
+
+- ```<dl>``` 태그 | [참고](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl)
+  - dl(definition/description list) 태그는 용어와 그에 대한 정의를 표현할 때 사용
+  - ```<dt>``` : dt(definition title), 용어명을 나타내는 태그
+  - ```<dd>``` : dd(definition description), 용어에 대한 정의 또는 설명을 나타내는 태그 
+~~~
+(예) 
+<dl>
+    <dt>리플리 증후군</dt>
+    <dd>허구의 세계를 진실이라 믿고 거짓된 말과 행동을 상습적으로 반복하는 반사회적 성격장애를 뜻하는 용어</dd>
+    <dt>피그말리온 효과</dt>
+    <dd>타인의 기대나 관심으로 인하여 능률이 오르거나 결과가 좋아지는 현상</dd>
+    <dt>언더독 효과</dt>
+    <dd>사람들이 약자라고 믿는 주체를 응원하게 되는 현상</dd>
+</dl> 
+~~~
+
+## 6) 리스트 요소 
+
+- ```<img>``` 태그
+  - img 태그는 문서에 이미지를 삽입하는 태그로, 닫는 태그가 없는 빈 태그 
+  - ```<src>``` 속성
+    - img 태그의 필수 속성으로, 이미지의 경로를 나타냄
+    - ```<src="(이미지 경로)">```의 형태로 구성
+  - ```<alt>``` 속성
+    - 이미지의 대체 텍스트를 나타내는 속성 
+~~~
+(예) 
+<img src="./images/pizza.png" alt="피자"> 
+~~~
+  - ```<width>```/```<height>``` 속성
+    - 이미지의 가로/세로를 나타내는 속성 
+    - 값을 입력하면 자동으로 픽셀(pixel) 단위로 계산
+    - 해당 속성이 없으면 이미지 원본 크기로 노출되며, 둘 중 하나만 선언하면 나머지 한 속성은 선언한 속성의 크기에 맞춰 자동으로 비율에 맞게 변경 
+~~~
+(예) 
+<img src="/examples/images/img_monalisa.png" alt="모나리자" height="280" width="180"> 
+~~~ 
+- 상대경로와 절대경로 
+  - 상대경로
+    - 현재 웹페이지를 기준으로 상대적인 이미지 위치를 나타냄
+    - 해당 페이지의 디렉토리를 ```./```로 선언하고, 그 뒤의 경로를 입력  
+  - 절대경로 : 실제 그 이미지가 위치한 곳의 전체 경로 
+~~~
+(예) 
+<!-- 상대경로 -->
+<img src="./images/pizza.png" alt="피자">
+
+<!-- 절대경로 -->
+<img src="C:/users/document/images/pizza.png" alt="피자">
+<img src="http://www.naver.com/pizza.png" alt="피자">
+~~~
+- 주요 이미지 파일 형식별 특징 
+  - gif : 제한적인 색을 사용하고, 용량이 적으며, 투명 이미지와 애니메이션 이미지를 지원하는 형식
+  - jpg : 사진이나 일반적인 그림에 쓰이며, 높은 압축률과 자연스러운 색상 표현을 지원하는 형식. 투명을 지원하지 않음
+  - png : 이미지 손실이 적으며, 투명과 반투명을 모두 지원하는 형식
+
+## 7) 테이블 요소 
+
+- 표의 구성 요소 
+  - ```<table>``` 태그 
+  - ```<th>``` 태그 : table header. header cell을 구성할 때 사용. ```<thead>``` 태그 내에서 사용
+  - ```<tr>``` 태그 : table row. standard cell, 즉 일반 cell을 구성할 때 행(가로줄)을 만들 때 사용. 
+  - ```<td>``` 태그 : table data. 실제 cell을 만드는 역할. 기본값은 굵은 글씨체에 중앙 정렬     
+- 표의 구성 방식 
+  - 좌상단에서 우측으로, 한 열이 지나면 아래 열로  
+~~~
+(예) 
+<table>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>10</td>
+        <td>11</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>14</td>
+        <td>15</td>
+        <td>16</td>
+    </tr>
+</table>
+~~~
+  - css로 테두리 정의
+~~~
+(예) 
+<!-- <head> 태그 내에서 정의 -->
+<style>
+  th, td { border: 1px solid; }
+</style>
+<!-- 또는 <th> 내부에서 정의 --> 
+<thead>
+  <tr>
+      <th colspan="2">The table header</th>
+  </tr>
+</thead>
+~~~
+- 표의 구조와 관련된 태그 
+  - ```<caption>``` : 표의 제목을 나타내는 태그
+  - ```<thead>``` : 제목 행을 그룹화하는 태그
+  - ```<tfoot>``` : 바닥 행을 그룹화하는 태그
+  - ```<tbody>``` : 본문 행을 그룹화하는 태그
+~~~
+(예) 
+<table> 
+    <caption>Monthly Savings</caption>
+    <thead>
+        <tr>
+            <th>Month</th>
+             <th>Savings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+             <td>January</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+             <td>February</td>
+            <td>$80</td>
+        </tr> 
+    </tbody>
+    <tfoot>
+        <tr>
+             <td>Sum</td>
+            <td>$180</td>
+        </tr>
+    </tfoot>
+ </table>
+~~~
+- ```<table>``` 태그의 주요 속성 (모든 속성은 {속성}="(숫자)" 형태로 구성) 
+  - ```colspan 속성``` : column span. 셀 가로줄을 합치는 개수를 지정. row의 개수는 tr 하위에 설정된 td의 총 개수. 이 중 colspan을 통해 td 중 합치고자 하는 개수를 숫자로 입력. 
+~~~
+(예) 
+<table border="1">
+  <tr>
+    <td colspan="2">병아리반</td> <!--td 개수 2개 입력해야 하는데, colspan으로 td 열 개수를 직접 입력함-->
+  </tr>
+  <tr>
+    <td> 1</td>
+    <td>김영희</td>
+  </tr>
+  <tr>
+    <td> 2</td>
+    <td>김순자</td>
+  </tr>
+</table>
+~~~
+  - ```rowspan 속성``` : row span. 셀 세로줄을 합치는 개수를 지정. row 개수 중 합치고자 하는 행 개수를 입력
+~~~
+(예) 
+<table border="1" >
+  <tr>
+    <td rowspan="3">병아리반</td> <!--tr 개수가 총 3개이므로, 3 입력하므로써 열을 한번에 합침-->
+    <td>김순자</td>
+  </tr>
+  <tr>
+    <td>김영희</td>
+  </tr>
+  <tr>
+    <td>이철수</td>
+  </tr>
+</table>
+~~~ 
+  - ```border 속성``` : 테이블 경계선 굵기 지정 
+  - ```width 속성``` : 너비 지정. pixel 또는 %로 
+  - ```height 속성``` : 높이 지정. pixel 또는 %로
+  - ```cellpadding 속성``` : 셀과 경계선 사이 여백 
+  - ```cellspacing 속성``` : 셀과 셀 사이의 여백 
+  - ```align 속성``` : 셀 가로줄(tr)의 데이터 정렬을 right, center, left 중 하나로 지정
+  - ```valign 속성``` : 셀 세로줄의 데이터 정렬을 top, middle, bottom 중 하나로 지정 
+  - ```bgcolor 속성``` : 배경색 설정. 색상 이름(예 : green)이나 색상코드(예 : #000000) 등으로 지정 
+  - ```boldercolo 속성r``` : 경계선 색상 설정. 색상 이름(예 : green)이나 색상코드(예 : #000000) 등으로 지정
+- 표와 관련된 더 많은 태그&속성 
+  - ```<colgroup> 태그와 <col>태그```
+    - 테이블의 컬럼(td 태그)에 적용할 스타일 width와 bakcground를 해당 태그에서 미리 적용할 수 있게 하는 태그 
+    - 특히 각 컬럼의 길이를 설정하는데 가장 많이 쓰임
+~~~
+(예) 
+<table border="1">
+  <colgroup>
+    <col width="50px" style="background: red" />
+    <col width="200px" style="background: blue" />
+    <col width="100px" style="background: green" />
+  </colgroup>
+
+  <thead>
+    <tr>
+      <td>번호</td>
+      <td>제목</td>
+     <td>이름</td>
+    </tr>
+  </thead>
+</table>
+~~~
+  - ```scope 속성```
+    - ```<th>``` 태그의 scope 속성은 해당 헤더 셀이 관련되는 셀의 종류를 명시함
+    - 일반 웹 브라우저에서는 ```<th>``` 요소에 scope 속성을 명시해도 아무런 시각적 효과도 나타나지 않지만, 스크린 리더기와 같은 장치에서는 유용하게 사용될 수 있음
+    - ```scope 속성```은 ```scope=(속성값)``` 형태로 구성  
+      - col 속성값 : 해당 셀이 열(column)을 위한 헤더 셀임을 명시
+      - row 속성값 : 해당 셀이 행(row)을 위한 헤더 셀임을 명시
+      - colgroup 속성값 : 해당 셀이 열의 그룹을 위한 헤더 셀임을 명시
+      - rowgroup 속성값 : 해당 셀이 행의 그룹을 위한 헤더 셀임을 명시
+~~~
+(예) 
+<table width="100%" summary="월별 스마트폰, 테블리PC, 데스트탑PC 판매현황">
+  <caption>상품에 따른 월별 판매현황</caption>
+    <colgroup>
+      <col width="20%" />
+      <col width="25%" />
+      <col width="25%" />
+      <col width="30%" />
+    </colgroup>
+   <thead>
+    <tr>
+      <th rowspan="2" scope="col">구분</th>
+      <th colspan= "3" scope="colgroup">상품종류</th>
+      <!-- ← scope="colgroup" 행으로 병합되었때는 그룹으로 사용-->
+    </tr>
+    <tr>
+      <th scope="col">스마트폰</th>
+      <th scope="col">테블리PC</th>
+       <th scope="col">데스크탑PC</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1월</th>
+          <td>5만대</th>
+          <td>3만대</th>
+          <td>1만대</th>
+       </tr>
+       <tr>
+         <th scope="row">2월</th>
+           <td>7만대</th>
+           <td>2만대</th>
+           <td>1만대</th>
+         </tr>
+     </tbody>
+    </table>
+~~~
+  - header 속성  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
