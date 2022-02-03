@@ -766,6 +766,85 @@
 </form>
 ~~~
 
+- ```<input>``` 태그 ([참고](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input))
+  - 내용이 없는 빈 요소. type 속성을 통해 여러 종류의 입력 양식으로 나타냄
+~~~
+(기본형)
+<input type=["속성값"]>여러 input 요소
+~~~
+  - ```<type="text">``` : 일반 텍스트 입력 필드
+    - ```<placeholder>``` 속성 존재
+~~~
+(예)
+<input type="text" placeholder="이름을 입력하세요">
+~~~
+  - ```<type="password">``` : 암호 입력 필드 
+    - 비공개 내용 입력 시 사용. 실제 입력 시 값을 노출하지 않음
+  - ```<type="radio">``` : 라디오 버튼. 중복 선택 불가
+    - ```<name="(속성명)">``` 정의 필요
+    - ```checked``` : 페이지가 로드될 때 미리 선택될 ```<input>``` 요소를 명시 
+~~~
+(예)
+<input type="radio" name="hobby" checked>등산
+<input type="radio" name="hobby">독서
+<input type="radio" name="hobby">운동
+~~~
+  - ```<type="checkbox">``` : 체크박스. 중복 선택 가능
+    - ```<name="(속성명)">``` 정의 필요
+    - ```checked``` : 페이지가 로드될 때 미리 선택될 ```<input>``` 요소를 명시
+    - ```disabled``` : 비활성화되는 ```<input>``` 요소 명시 
+~~~
+(예)
+<input type="checkbox" name="hobby" checked>등산
+<input type="checkbox" name="hobby" disabled>독서
+<input type="checkbox" name="hobby">운동
+~~~
+  - ```<type="file">``` : 파일
+    - ```<accept="(파일 포맷명)">``` 통해 파일 포맷명 정의 
+      - ```accept="image/png" or accept=".png"``` : Accepts PNG files.
+      - ```accept="image/png, image/jpeg" or accept=".png, .jpg, .jpeg"``` : Accept PNG or JPEG files.
+      - ```accept="image/*"``` : Accept any file with an image/* MIME type. (Many mobile devices also let the user take a picture with the camera when this is used.)
+      - ```accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"``` : accept anything that smells like an MS Word document.
+
+    - 복수 업로드 가능할 경우 ```<multiple>``` 속성 추가
+~~~
+(예)
+<input type="file" name="avatar" accept="image/png, image/jpeg" or accept=".pdf, .odf" multiple>
+~~~
+  - ```<type="submit">``` : 제출
+    - 서버에 입력받은 데이터 전송
+    - ```<input>``` 태그의 ```'type'``` 속성을 ```'submit'``` 이라고 지정해 주면,
+      - 자동으로 데이터를 전송할 수 있는 버튼이 생성
+      - 그 버튼을 클릭하면 지정된 URL로 ```<form>``` 태그 안에 입력된 값들이 ```'action'``` 속성으로 지정된 서버 페이지로 전송
+      - ```value=(버튼명)``` 지정 가능   
+~~~
+(기본형)
+<input type="submit" value="입력 완료"> 
+~~~
+
+  - ```autocomplete``` 속성 
+    - ```<input>``` 요소에서 자동 완성 기능을 사용할지 여부를 명시
+    - ```autocomplete``` 속성값을 on으로 명시하면, 브라우저는 사용자가 이전에 입력했던 값들을 기반으로 사용자가 입력한 값과 비슷한 값들을 드롭다운 옵션으로 보여줌 
+~~~
+(기본형)
+<input autocomplete="on|off">
+~~~
+
+    - ```autocomplete``` 속성이 제대로 동작하는 ```<input>``` 요소의 type 속성값 : color, datepickers, email, password, range, search, tel, text
+  - ```autofocus``` 속성
+    - 페이지가 로드될 때 자동으로 포커스(focus)가 해당 ```<input>``` 요소로 이동됨을 명시
+    ```autofocus``` 속성은 불리언(boolean) 속성. 즉, 해당 속성을 명시하지 않으면 속성값이 자동으로 false 값을 가지게 되며, 명시하면 자동으로 true 값을 가지게 됨
+~~~
+()
+<form action="/examples/media/action_target.php" method="get">
+    이름 : <input type="text" name="st_name"><br>
+    학번 : <input type="text" name="st_id" autofocus><br>
+    학과 : <input type="text" name="department"><br>
+    <input type="submit">
+</form>
+~~~
+
+
 
 
 
