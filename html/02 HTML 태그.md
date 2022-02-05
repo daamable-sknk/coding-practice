@@ -755,13 +755,14 @@
       - 속성값 ```get``` : 데이터를 256-4096 byte까지만 서버로 넘길 수 있음. 주소 표시줄에 사용자가 입력한 내용이 그대로 드러남. 
       - 속성값 ```post``` : 입력 내용 길이에 제한받지 않고 사용자가 입력한 내용도 드러나지 않음. 
     - ```<name>``` : Javascript로 폼 제어 시 사용할 폼 이름 지정
-    - ```<action>``` : ```<form>``` 태그 안 내용 처리해 줄 서버 프로그램 지정
-    - ```<target>``` : ```<action>``` 속성에서 지정한 script 파일을 현재 창 아닌 다른 창에서 열어봄  
+    - ```<action>``` : ```<form>``` 태그 안 내용 처리해 줄 서버 프로그램 URL을 지정
+    - ```<target>``` : ```<action>``` 속성에서 지정한 script 파일의 응답 열릴 위치를 지정. ```_blank```, ```_self```, ```_parent```, ```_top``` 으로 구성
+    ```<autocomplete>``` : ```<form>``` 요소에서 자동 완성 기능 사용 여부 명시. ```on```, ```off``` 로 구성  
 ~~~
 (예)
-<form method="post" action="register.php">
+<form method="post" action="register.php" name="form_name" target>
 
-<!-- 여러 폼 요소 --> 
+<!-- <input> 등 여러 폼 요 --> 
 
 </form>
 ~~~
