@@ -183,7 +183,7 @@ h1 {
         </header>
     
         <main>
-            <h1 class="bg accent">내부 스타일 시트</h1> <!-- 클래스 스타일이 적용되는 태그. 이 때 두 개 이상의 클래스 스타일 적용할 경우, class 태그에 클래스명을 공백으로 구분하여 기재 -->
+            <h1 class="bg accent">내부 스타일 시트</h1> <!-- 클래스 스타일이 적용되는 태그. 이 때 두 개 이상의 클래스 스타일 적용할 경우, class 태그에 클래스명을 공백으로 구분하여 기 -->
             <article>아티클1</article>
             <article>아티클2</article>
             <article>
